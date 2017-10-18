@@ -1,0 +1,351 @@
+<!doctype html><html><head><meta charset='utf-8'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.4.1/github-markdown.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+  <link rel="stylesheet" href="https://gitcdn.xyz/repo/goessner/mdmath/master/css/texmath.css">
+  <link rel="stylesheet" href="https://gitcdn.xyz/repo/goessner/mdmath/master/css/vscode-texmath.css">
+  
+  </head><body class="markdown-body">
+  <h1 data-line="0" class="code-line" id="%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E7%AC%AC%E5%9B%9B%E7%AB%A0%E4%BD%9C%E4%B8%9A2">编译原理第四章作业(2)</h1>
+  <h2 data-line="1" class="code-line" id="151220129-%E8%AE%A1%E7%A7%91-%E5%90%B4%E6%94%BF%E4%BA%BF">151220129 计科 吴政亿</h2>
+  <h3 data-line="2" class="code-line" id="462">4.6.2</h3>
+  <ol>
+  <li data-line="3" class="code-line">
+  <p data-line="3" class="code-line">增广文法:</p>
+  <p data-line="5" class="code-line">(0)<eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>S</mi><mo mathvariant="normal">′</mo></msup><mo>→</mo><mi>S</mi></mrow><annotation encoding="application/x-tex">S&#x27; \\rightarrow S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.751892em;"></span><span class="strut bottom" style="height:0.751892em;vertical-align:0em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">′</span></span></span></span></span></span></span></span></span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.05764em;">S</span></span></span></span></eq><br>
+  (1)<eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mo>→</mo><mi>S</mi><mi>S</mi><mo>+</mo></mrow><annotation encoding="application/x-tex">S \\rightarrow S S +</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord">+</span></span></span></span></eq><br>
+  (2)<eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>B</mi><mo>→</mo><mi>S</mi><mi>S</mi><mo>∗</mo></mrow><annotation encoding="application/x-tex">B \\rightarrow S S \*</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord">∗</span></span></span></span></eq><br>
+  (3)<eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>B</mi><mo>→</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">B \\rightarrow a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mrel">→</span><span class="mord mathit">a</span></span></span></span></eq></p>
+  </li>
+  <li data-line="10" class="code-line">
+  <p data-line="10" class="code-line">SLR项集如下:</p>
+  </li>
+  </ol>
+  <ul>
+  <li data-line="11" class="code-line"><eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>I</mi><mn>0</mn></msub><mo>:</mo><msup><mi>S</mi><mo mathvariant="normal">′</mo></msup><mo>→</mo><mo>⋅</mo><mi>S</mi><mo separator="true">,</mo><mi>S</mi><mo>→</mo><mo>⋅</mo><mi>S</mi><mi>S</mi><mo>+</mo><mo separator="true">,</mo><mi>S</mi><mo>→</mo><mo>⋅</mo><mi>S</mi><mi>S</mi><mo>∗</mo><mo separator="true">,</mo><mi>S</mi><mo>→</mo><mo>⋅</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">I\_0:S&#x27; \\rightarrow \\cdot S, S \\rightarrow \\cdot SS+, S \\rightarrow \\cdot SS\*,S \\rightarrow \\cdot a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.751892em;"></span><span class="strut bottom" style="height:0.946332em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mrel">:</span><span class="mord"><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">′</span></span></span></span></span></span></span></span></span><span class="mrel">→</span><span class="mord">⋅</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mrel">→</span><span class="mord">⋅</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord">+</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mrel">→</span><span class="mord">⋅</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord">∗</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mrel">→</span><span class="mord">⋅</span><span class="mord mathit">a</span></span></span></span></eq></li>
+  <li data-line="12" class="code-line"><eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>I</mi><mn>1</mn></msub><mo>:</mo><msup><mi>S</mi><mo mathvariant="normal">′</mo></msup><mo>→</mo><mi>a</mi><mo>⋅</mo></mrow><annotation encoding="application/x-tex">I\_1:S&#x27; \\rightarrow a \\cdot</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.751892em;"></span><span class="strut bottom" style="height:0.901892em;vertical-align:-0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mrel">:</span><span class="mord"><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">′</span></span></span></span></span></span></span></span></span><span class="mrel">→</span><span class="mord mathit">a</span><span class="mord">⋅</span></span></span></span></eq></li>
+  <li data-line="13" class="code-line"><eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>I</mi><mn>2</mn></msub><mo>:</mo><msup><mi>S</mi><mo mathvariant="normal">′</mo></msup><mo>→</mo><mi>S</mi><mo>⋅</mo><mo separator="true">,</mo><mi>S</mi><mo>→</mo><mi>S</mi><mo>⋅</mo><mi>S</mi><mo>+</mo><mo separator="true">,</mo><mi>S</mi><mo>→</mo><mi>S</mi><mo>⋅</mo><mi>S</mi><mo>∗</mo><mo separator="true">,</mo><mi>S</mi><mo>→</mo><mo>⋅</mo><mi>S</mi><mi>S</mi><mo>+</mo><mo separator="true">,</mo><mi>S</mi><mo>→</mo><mo>⋅</mo><mi>S</mi><mi>S</mi><mo>∗</mo><mo separator="true">,</mo><mi>S</mi><mo>→</mo><mo>⋅</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">I\_2:S&#x27; \\rightarrow S \\cdot , S \\rightarrow S \\cdot S+, S \\rightarrow S \\cdot S\*,S \\rightarrow \\cdot SS+, S \\rightarrow \\cdot SS\*,S \\rightarrow \\cdot a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.751892em;"></span><span class="strut bottom" style="height:0.946332em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mrel">:</span><span class="mord"><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">′</span></span></span></span></span></span></span></span></span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord">⋅</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mbin">⋅</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord">+</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mbin">⋅</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord">∗</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mrel">→</span><span class="mord">⋅</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord">+</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mrel">→</span><span class="mord">⋅</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord">∗</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mrel">→</span><span class="mord">⋅</span><span class="mord mathit">a</span></span></span></span></eq></li>
+  <li data-line="14" class="code-line"><eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>I</mi><mn>3</mn></msub><mo>:</mo><msup><mi>S</mi><mo mathvariant="normal">′</mo></msup><mo>→</mo><mi>S</mi><mi>S</mi><mo>⋅</mo><mo>+</mo><mo separator="true">,</mo><mi>S</mi><mo>→</mo><mi>S</mi><mi>S</mi><mo>⋅</mo><mo>∗</mo><mo separator="true">,</mo><mi>S</mi><mo>→</mo><mi>S</mi><mo>⋅</mo><mi>S</mi><mo>+</mo><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">I\_3:S&#x27; \\rightarrow SS \\cdot +, S \\rightarrow SS \\cdot \*, S \\rightarrow S \\cdot S+,</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.751892em;"></span><span class="strut bottom" style="height:0.946332em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mrel">:</span><span class="mord"><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">′</span></span></span></span></span></span></span></span></span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mbin">⋅</span><span class="mord">+</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mbin">⋅</span><span class="mord">∗</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mbin">⋅</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord">+</span><span class="mpunct">,</span></span></span></span></eq><br>
+  <eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mi>S</mi><mo>→</mo><mi>S</mi><mo>⋅</mo><mi>S</mi><mo>∗</mo><mo separator="true">,</mo><mi>S</mi><mo>→</mo><mo>⋅</mo><mi>S</mi><mi>S</mi><mo>+</mo><mo separator="true">,</mo><mi>S</mi><mo>→</mo><mo>⋅</mo><mi>S</mi><mi>S</mi><mo>∗</mo><mo separator="true">,</mo><mi>S</mi><mo>→</mo><mo>⋅</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">\\ \\ \\ \\ \\ \\ \\ S \\rightarrow S \\cdot S\*,S \\rightarrow \\cdot SS+, S \\rightarrow \\cdot SS\*,S \\rightarrow \\cdot a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord mathit"><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mord mathit" style="margin-right:0.05764em;">S</span></span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mbin">⋅</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord">∗</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mrel">→</span><span class="mord">⋅</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord">+</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mrel">→</span><span class="mord">⋅</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord">∗</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mrel">→</span><span class="mord">⋅</span><span class="mord mathit">a</span></span></span></span></eq></li>
+  <li data-line="16" class="code-line"><eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>I</mi><mn>4</mn></msub><mo>:</mo><msup><mi>S</mi><mo mathvariant="normal">′</mo></msup><mo>→</mo><mi>S</mi><mi>S</mi><mo>+</mo><mo>⋅</mo></mrow><annotation encoding="application/x-tex">I\_4:S&#x27; \\rightarrow SS+ \\cdot</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.751892em;"></span><span class="strut bottom" style="height:0.901892em;vertical-align:-0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">4</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mrel">:</span><span class="mord"><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">′</span></span></span></span></span></span></span></span></span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mbin">+</span><span class="mord">⋅</span></span></span></span></eq></li>
+  <li data-line="17" class="code-line"><eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>I</mi><mn>5</mn></msub><mo>:</mo><msup><mi>S</mi><mo mathvariant="normal">′</mo></msup><mo>→</mo><mi>S</mi><mi>S</mi><mo>∗</mo><mo>⋅</mo></mrow><annotation encoding="application/x-tex">I\_5:S&#x27; \\rightarrow SS\* \\cdot</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.751892em;"></span><span class="strut bottom" style="height:0.901892em;vertical-align:-0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">5</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mrel">:</span><span class="mord"><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">′</span></span></span></span></span></span></span></span></span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mbin">∗</span><span class="mord">⋅</span></span></span></span></eq></li>
+  </ul>
+  <ol start="3">
+  <li data-line="19" class="code-line">
+  <p data-line="19" class="code-line">GOTO 函数如下:<br>
+  <eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>G</mi><mi>O</mi><mi>T</mi><mi>O</mi><mo>(</mo><msub><mi>I</mi><mn>0</mn></msub><mo separator="true">,</mo><mi>a</mi><mo>)</mo><mo>=</mo><msub><mi>I</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">GOTO(I\_0,a)=I\_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit">G</span><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mpunct">,</span><span class="mord mathit">a</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span></eq> , <eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>G</mi><mi>O</mi><mi>T</mi><mi>O</mi><mo>(</mo><msub><mi>I</mi><mn>0</mn></msub><mo separator="true">,</mo><mi>S</mi><mo>)</mo><mo>=</mo><msub><mi>I</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">GOTO(I\_0,S)=I\_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit">G</span><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span></eq><br>
+  <eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>G</mi><mi>O</mi><mi>T</mi><mi>O</mi><mo>(</mo><msub><mi>I</mi><mn>2</mn></msub><mo separator="true">,</mo><mi>a</mi><mo>)</mo><mo>=</mo><msub><mi>I</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">GOTO(I\_2,a)=I\_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit">G</span><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mpunct">,</span><span class="mord mathit">a</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span></eq> , <eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>G</mi><mi>O</mi><mi>T</mi><mi>O</mi><mo>(</mo><msub><mi>I</mi><mn>2</mn></msub><mo separator="true">,</mo><mi>S</mi><mo>)</mo><mo>=</mo><msub><mi>I</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">GOTO(I\_2,S)=I\_3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit">G</span><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span></eq> , <eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>G</mi><mi>O</mi><mi>T</mi><mi>O</mi><mo>(</mo><msub><mi>I</mi><mn>2</mn></msub><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">GOTO(I\_2,</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit">G</span><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mpunct">,</span></span></span></span></eq>$<eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>)</mo><mo>=</mo><mi>a</mi><mi>c</mi><mi>c</mi><mi>e</mi><mi>p</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">)=accept</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathit">a</span><span class="mord mathit">c</span><span class="mord mathit">c</span><span class="mord mathit">e</span><span class="mord mathit">p</span><span class="mord mathit">t</span></span></span></span></eq><br>
+  <eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>G</mi><mi>O</mi><mi>T</mi><mi>O</mi><mo>(</mo><msub><mi>I</mi><mn>3</mn></msub><mo separator="true">,</mo><mi>a</mi><mo>)</mo><mo>=</mo><msub><mi>I</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">GOTO(I\_3,a)=I\_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit">G</span><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mpunct">,</span><span class="mord mathit">a</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span></eq> , <eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>G</mi><mi>O</mi><mi>T</mi><mi>O</mi><mo>(</mo><msub><mi>I</mi><mn>3</mn></msub><mo separator="true">,</mo><mi>S</mi><mo>)</mo><mo>=</mo><msub><mi>I</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">GOTO(I\_3,S)=I\_3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit">G</span><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span></eq><br>
+  <eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>G</mi><mi>O</mi><mi>T</mi><mi>O</mi><mo>(</mo><msub><mi>I</mi><mn>3</mn></msub><mo separator="true">,</mo><mo>+</mo><mo>)</mo><mo>=</mo><msub><mi>I</mi><mn>4</mn></msub></mrow><annotation encoding="application/x-tex">GOTO(I\_3,+)=I\_4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit">G</span><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mpunct">,</span><span class="mord">+</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">4</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span></eq> , <eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>G</mi><mi>O</mi><mi>T</mi><mi>O</mi><mo>(</mo><msub><mi>I</mi><mn>3</mn></msub><mo separator="true">,</mo><mo>∗</mo><mo>)</mo><mo>=</mo><msub><mi>I</mi><mn>5</mn></msub></mrow><annotation encoding="application/x-tex">GOTO(I\_3,\*)=I\_5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord mathit">G</span><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mpunct">,</span><span class="mord">∗</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">5</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span></eq></p>
+  </li>
+  <li data-line="25" class="code-line">
+  <p data-line="25" class="code-line">语法分析表如下：</p>
+  </li>
+  </ol>
+  <table class="tg">
+    <tr>
+      <th class="tg-2n8g" rowspan="2">状态</th>
+      <th class="tg-2n8g" colspan="4">ACTION</th>
+      <th class="tg-2n8g">GOTO</th>
+    </tr>
+    <tr>
+      <td class="tg-2n8g">a</td>
+      <td class="tg-2n8g">+</td>
+      <td class="tg-2n8g">*</td>
+      <td class="tg-2n8g">$</td>
+      <td class="tg-2n8g">S</td>
+    </tr>
+    <tr>
+      <td class="tg-2n8g">0</td>
+      <td class="tg-2n8g">S1</td>
+      <td class="tg-2n8g"></td>
+      <td class="tg-2n8g"></td>
+      <td class="tg-2n8g"></td>
+      <td class="tg-2n8g">2</td>
+    </tr>
+    <tr>
+      <td class="tg-2n8g">1</td>
+      <td class="tg-2n8g">r3</td>
+      <td class="tg-2n8g">r3</td>
+      <td class="tg-2n8g">r3</td>
+      <td class="tg-2n8g">r3</td>
+      <td class="tg-2n8g"></td>
+    </tr>
+    <tr>
+      <td class="tg-2n8g">2</td>
+      <td class="tg-2n8g">S1</td>
+      <td class="tg-2n8g"></td>
+      <td class="tg-2n8g"></td>
+      <td class="tg-2n8g">accept</td>
+      <td class="tg-2n8g">3</td>
+    </tr>
+    <tr>
+      <td class="tg-2n8g">3</td>
+      <td class="tg-2n8g">S1</td>
+      <td class="tg-2n8g">S4</td>
+      <td class="tg-2n8g">S5</td>
+      <td class="tg-2n8g"></td>
+      <td class="tg-2n8g">3</td>
+    </tr>
+    <tr>
+      <td class="tg-2n8g">4</td>
+      <td class="tg-2n8g">r1</td>
+      <td class="tg-2n8g">r1</td>
+      <td class="tg-2n8g">r1</td>
+      <td class="tg-2n8g">r1</td>
+      <td class="tg-2n8g"></td>
+    </tr>
+    <tr>
+      <td class="tg-2n8g">5</td>
+      <td class="tg-2n8g">r2</td>
+      <td class="tg-2n8g">r2</td>
+      <td class="tg-2n8g">r2</td>
+      <td class="tg-2n8g">r2</td>
+      <td class="tg-2n8g"></td>
+    </tr>
+  </table>
+  <p data-line="90" class="code-line">无冲突，这显然是一个 SLR 文法</p>
+  <h3 data-line="92" class="code-line" id="463">4.6.3</h3>
+  <table>
+  <thead>
+  <tr>
+  <th>序号</th>
+  <th>栈</th>
+  <th>符号</th>
+  <th>输入</th>
+  <th>动作</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td>(1)</td>
+  <td>0</td>
+  <td></td>
+  <td>aa*a+$</td>
+  <td>移入</td>
+  </tr>
+  <tr>
+  <td>(2)</td>
+  <td>01</td>
+  <td>a</td>
+  <td>a*a+$</td>
+  <td>按S-&gt;a规约</td>
+  </tr>
+  <tr>
+  <td>(3)</td>
+  <td>02</td>
+  <td>S</td>
+  <td>a*a+$</td>
+  <td>移入</td>
+  </tr>
+  <tr>
+  <td>(4)</td>
+  <td>021</td>
+  <td>Sa</td>
+  <td>*a+$</td>
+  <td>按S-&gt;a规约</td>
+  </tr>
+  <tr>
+  <td>(5)</td>
+  <td>023</td>
+  <td>SS</td>
+  <td>*a+$</td>
+  <td>移入</td>
+  </tr>
+  <tr>
+  <td>(6)</td>
+  <td>0235</td>
+  <td>SS*</td>
+  <td>a+$</td>
+  <td>按S-&gt;SS*规约</td>
+  </tr>
+  <tr>
+  <td>(7)</td>
+  <td>02</td>
+  <td>S</td>
+  <td>a+$</td>
+  <td>移入</td>
+  </tr>
+  <tr>
+  <td>(8)</td>
+  <td>021</td>
+  <td>Sa</td>
+  <td>+$</td>
+  <td>按S-&gt;a规约</td>
+  </tr>
+  <tr>
+  <td>(9)</td>
+  <td>023</td>
+  <td>SS</td>
+  <td>+$</td>
+  <td>移入</td>
+  </tr>
+  <tr>
+  <td>(10)</td>
+  <td>0234</td>
+  <td>SS+</td>
+  <td>$</td>
+  <td>按S-&gt;SS+规约</td>
+  </tr>
+  <tr>
+  <td>(11)</td>
+  <td>02</td>
+  <td>S</td>
+  <td>$</td>
+  <td>接受</td>
+  </tr>
+  </tbody>
+  </table>
+  <h3 data-line="108" class="code-line" id="466">4.6.6</h3>
+  <ul>
+  <li data-line="110" class="code-line">
+  <p data-line="110" class="code-line">因为First(SA) = First(A) = {a}，所以该文法不是LL(1)的。</p>
+  </li>
+  <li data-line="111" class="code-line">
+  <p data-line="111" class="code-line">下证该文法是SLR(1)的：</p>
+  <ol>
+  <li data-line="112" class="code-line">增广文法：<br>
+  (0) <eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>S</mi><mo mathvariant="normal">′</mo></msup><mo>→</mo><mi>S</mi></mrow><annotation encoding="application/x-tex">S&#x27; \\rightarrow S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.751892em;"></span><span class="strut bottom" style="height:0.751892em;vertical-align:0em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">′</span></span></span></span></span></span></span></span></span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.05764em;">S</span></span></span></span></eq><br>
+  (1) <eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mo>→</mo><mi>S</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">S \\rightarrow SA</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord mathit">A</span></span></span></span></eq><br>
+  (2) <eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>S</mi><mo>→</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">S \\rightarrow A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mrel">→</span><span class="mord mathit">A</span></span></span></span></eq><br>
+  (3) <eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo>→</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">A \\rightarrow a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">A</span><span class="mrel">→</span><span class="mord mathit">a</span></span></span></span></eq></li>
+  <li data-line="117" class="code-line">SLR项集:</li>
+  </ol>
+  <ul>
+  <li data-line="118" class="code-line"><eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>I</mi><mn>0</mn></msub><mo>:</mo><msup><mi>S</mi><mo mathvariant="normal">′</mo></msup><mo>→</mo><mo>⋅</mo><mi>S</mi><mo separator="true">,</mo><mi>S</mi><mo>→</mo><mo>⋅</mo><mi>S</mi><mi>A</mi><mo separator="true">,</mo><mi>S</mi><mo>→</mo><mo>⋅</mo><mi>A</mi><mo separator="true">,</mo><mi>A</mi><mo>→</mo><mo>⋅</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">I\_0:S&#x27; \\rightarrow \\cdot S , S \\rightarrow \\cdot SA,S \\rightarrow \\cdot A , A \\rightarrow \\cdot a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.751892em;"></span><span class="strut bottom" style="height:0.946332em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mrel">:</span><span class="mord"><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">′</span></span></span></span></span></span></span></span></span><span class="mrel">→</span><span class="mord">⋅</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mrel">→</span><span class="mord">⋅</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord mathit">A</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mrel">→</span><span class="mord">⋅</span><span class="mord mathit">A</span><span class="mpunct">,</span><span class="mord mathit">A</span><span class="mrel">→</span><span class="mord">⋅</span><span class="mord mathit">a</span></span></span></span></eq></li>
+  <li data-line="119" class="code-line"><eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>I</mi><mn>1</mn></msub><mo>:</mo><mi>A</mi><mo>→</mo><mi>a</mi><mo>⋅</mo></mrow><annotation encoding="application/x-tex">I\_1:A \\rightarrow a \\cdot</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mrel">:</span><span class="mord mathit">A</span><span class="mrel">→</span><span class="mord mathit">a</span><span class="mord">⋅</span></span></span></span></eq></li>
+  <li data-line="120" class="code-line"><eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>I</mi><mn>2</mn></msub><mo>:</mo><mi>S</mi><mo>→</mo><mi>A</mi><mo>⋅</mo></mrow><annotation encoding="application/x-tex">I\_2:S \\rightarrow A \\cdot</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mrel">:</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mrel">→</span><span class="mord mathit">A</span><span class="mord">⋅</span></span></span></span></eq></li>
+  <li data-line="121" class="code-line"><eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>I</mi><mn>3</mn></msub><mo>:</mo><msup><mi>S</mi><mo mathvariant="normal">′</mo></msup><mo>→</mo><mi>S</mi><mo>⋅</mo><mo separator="true">,</mo><mi>S</mi><mo>→</mo><mi>S</mi><mo>⋅</mo><mi>A</mi><mo separator="true">,</mo><mi>A</mi><mo>→</mo><mo>⋅</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">I\_3:S&#x27; \\rightarrow S \\cdot , S \\rightarrow S \\cdot A , A \\rightarrow \\cdot a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.751892em;"></span><span class="strut bottom" style="height:0.946332em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mrel">:</span><span class="mord"><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">′</span></span></span></span></span></span></span></span></span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord">⋅</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mbin">⋅</span><span class="mord mathit">A</span><span class="mpunct">,</span><span class="mord mathit">A</span><span class="mrel">→</span><span class="mord">⋅</span><span class="mord mathit">a</span></span></span></span></eq></li>
+  <li data-line="122" class="code-line"><eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>I</mi><mn>4</mn></msub><mo>:</mo><mi>S</mi><mo>→</mo><mi>S</mi><mi>A</mi><mo>⋅</mo></mrow><annotation encoding="application/x-tex">I\_4:S \\rightarrow SA \\cdot</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">4</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mrel">:</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mrel">→</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord mathit">A</span><span class="mord">⋅</span></span></span></span></eq></li>
+  </ul>
+  <ol start="3">
+  <li data-line="124" class="code-line">语法分析表:</li>
+  </ol>
+  </li>
+  </ul>
+  <table>
+    <tr>
+      <th rowspan="2">状态</th>
+      <th colspan="2">ACTION</th>
+      <th colspan="2">GOTO</th>
+    </tr>
+    <tr>
+      <td>a</td>
+      <td>$</td>
+      <td>S</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>S1</td>
+      <td></td>
+      <td>S2</td>
+      <td>S3</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>r3</td>
+      <td>r3</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>r2</td>
+      <td>r2</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>S!</td>
+      <td>acc</td>
+      <td></td>
+      <td>S4</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>r1</td>
+      <td>r1</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+  <p data-line="175" class="code-line">因为没有重复的冲突项，故该文法为SLR（1）的。</p>
+  <h3 data-line="177" class="code-line" id="471">4.7.1</h3>
+  <ol>
+  <li data-line="178" class="code-line">规范LR项集族</li>
+  </ol>
+  <pre class="hljs"><code><div>I0:
+      [S' -&gt; ·S  , $] 
+      [S' -&gt; ·SS+, $], [S' -&gt; ·SS+, a]
+      [S' -&gt; ·SS*, $], [S' -&gt; ·SS*, a]
+      [S' -&gt; ·a  , $], [S' -&gt; ·a  , a]
+  I1:
+      [S' -&gt; a·  , $], [S' -&gt; a·  , a]
+  I2:
+      [S' -&gt; S·  , $] 
+      [S' -&gt; S·S+, $], [S' -&gt; S·S+, a]
+      [S' -&gt; S·S*, $], [S' -&gt; S·S*, a]
+      [S' -&gt; ·SS+, a], [S' -&gt; ·SS+, *], [S' -&gt; ·SS+, +]
+      [S' -&gt; ·SS*, a], [S' -&gt; ·SS*, *], [S' -&gt; ·SS*, +]
+      [S' -&gt; ·a  , a], [S' -&gt; ·a  , *], [S' -&gt; ·a  , +]
+  I3:
+      [S' -&gt; a·  , a], [S' -&gt; a·  , *], [S' -&gt; a·  , +]
+  I4:
+      [S' -&gt; SS·+, $], [S' -&gt; SS·+, a]
+      [S' -&gt; SS·*, $], [S' -&gt; SS·*, a]
+      [S' -&gt; S·S+, a], [S' -&gt; S·S+, *], [S' -&gt; S·S+, +]
+      [S' -&gt; S·S*, a], [S' -&gt; S·S*, *], [S' -&gt; S·S*, +]
+      [S' -&gt; ·SS+, a], [S' -&gt; ·SS+, *], [S' -&gt; ·SS+, +]
+      [S' -&gt; ·SS*, a], [S' -&gt; ·SS*, *], [S' -&gt; ·SS*, +]
+      [S' -&gt; ·a  , a], [S' -&gt; ·a  , *], [S' -&gt; ·a  , +]
+  I5:
+      [S' -&gt; SS+·, $], [S' -&gt; SS+·, a]
+  I6:
+      [S' -&gt; SS*·, $], [S' -&gt; SS*·, a]
+  I7:
+      [S' -&gt; SS·+, a], [S' -&gt; SS·+, *], [S' -&gt; SS·+, +]
+      [S' -&gt; SS·*, a], [S' -&gt; SS·*, *], [S' -&gt; SS·*, +]
+      [S' -&gt; S·S+, a], [S' -&gt; S·S+, *], [S' -&gt; S·S+, +]
+      [S' -&gt; S·S*, a], [S' -&gt; S·S*, *], [S' -&gt; S·S*, +]
+      [S' -&gt; ·SS+, a], [S' -&gt; ·SS+, *], [S' -&gt; ·SS+, +]
+      [S' -&gt; ·SS*, a], [S' -&gt; ·SS*, *], [S' -&gt; ·SS*, +]
+      [S' -&gt; ·a  , a], [S' -&gt; ·a  , *], [S' -&gt; ·a  , +]
+  I8:
+      [S' -&gt; SS+·, a], [S' -&gt; SS+·, *], [S' -&gt; SS+·, +]
+  I9:
+      [S' -&gt; SS*·, a], [S' -&gt; SS*·, *], [S' -&gt; SS*·, +]
+  </div></code></pre>
+  <ol start="2">
+  <li data-line="223" class="code-line">LALR项集族:</li>
+  </ol>
+  <pre class="hljs"><code><div>I0:
+      [S' -&gt; ·S  , $] 
+      [S' -&gt; ·SS+, $], [S' -&gt; ·SS+, a]
+      [S' -&gt; ·SS*, $], [S' -&gt; ·SS*, a]
+      [S' -&gt; ·a  , $], [S' -&gt; ·a  , a]
+  I1:
+      [S' -&gt; S·  , $] 
+      [S' -&gt; S·S+, $], [S' -&gt; S·S+, a]
+      [S' -&gt; S·S*, $], [S' -&gt; S·S*, a]
+      [S' -&gt; ·SS+, a], [S' -&gt; ·SS+, *], [S' -&gt; ·SS+, +]
+      [S' -&gt; ·SS*, a], [S' -&gt; ·SS*, *], [S' -&gt; ·SS*, +]
+      [S' -&gt; ·a  , a], [S' -&gt; ·a  , *], [S' -&gt; ·a  , +]
+  I2:
+      [S' -&gt; SS·+, a], [S' -&gt; SS·+, *], [S' -&gt; SS·+, +], [S' -&gt; SS·+, $]
+      [S' -&gt; SS·*, a], [S' -&gt; SS·*, *], [S' -&gt; SS·*, *], [S' -&gt; SS·*, $]
+      [S' -&gt; S·S+, a], [S' -&gt; S·S+, *], [S' -&gt; S·S+, +]
+      [S' -&gt; S·S*, a], [S' -&gt; S·S*, *], [S' -&gt; S·S*, +]
+      [S' -&gt; ·SS+, a], [S' -&gt; ·SS+, *], [S' -&gt; ·SS+, +]
+      [S' -&gt; ·SS*, a], [S' -&gt; ·SS*, *], [S' -&gt; ·SS*, +]
+      [S' -&gt; ·a  , a], [S' -&gt; ·a  , *], [S' -&gt; ·a  , +]
+  I3:
+      [S' -&gt; a·  , a], [S' -&gt; a·  , *], [S' -&gt; a·  , +], [S' -&gt; a·  , $]
+  I4:
+      [S' -&gt; SS+·, a], [S' -&gt; SS+·, *], [S' -&gt; SS+·, +], [S' -&gt; SS+·, $]
+  I5:
+      [S' -&gt; SS*·, a], [S' -&gt; SS*·, *], [S' -&gt; SS*·, +], [S' -&gt; SS*·, $]
+  </div></code></pre>
+  
+  </body></html>
