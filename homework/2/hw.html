@@ -1,0 +1,1038 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.4.1/github-markdown.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+    <link rel="stylesheet" href="https://gitcdn.xyz/repo/goessner/mdmath/master/css/texmath.css">
+    <link rel="stylesheet" href="https://gitcdn.xyz/repo/goessner/mdmath/master/css/vscode-texmath.css">
+
+</head>
+
+<body class="markdown-body">
+    <h1 data-line="0" class="code-line" id="151220129-%E8%AE%A1%E7%A7%91-%E5%90%B4%E6%94%BF%E4%BA%BF">151220129 计科 吴政亿</h1>
+    <h3 data-line="2" class="code-line" id="%E5%8E%9A%E4%B9%A6-371">厚书 3.7.1</h3>
+    <p data-line="3" class="code-line">(2)一个状态</p>
+    <p data-line="5" class="code-line">
+        <eq>
+            <span class="katex">
+                <span class="katex-mathml">
+                    <math>
+                        <semantics>
+                            <mrow>
+                                <mi>ϵ</mi>
+                                <mo>−</mo>
+                                <mi>c</mi>
+                                <mi>l</mi>
+                                <mi>o</mi>
+                                <mi>s</mi>
+                                <mi>u</mi>
+                                <mi>r</mi>
+                                <mi>e</mi>
+                                <mo>(</mo>
+                                <mn>0</mn>
+                                <mo>)</mo>
+                                <mo>=</mo>
+                                <mo>{</mo>
+                                <mn>0</mn>
+                                <mo>}</mo>
+                                <mo>=</mo>
+                                <mi>A</mi>
+                            </mrow>
+                            <annotation encoding="application/x-tex">\epsilon-closure(0)=\{0\}=A</annotation>
+                        </semantics>
+                    </math>
+                </span>
+                <span class="katex-html" aria-hidden="true">
+                    <span class="strut" style="height:0.75em;"></span>
+                    <span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span>
+                    <span class="base">
+                        <span class="mord mathit">ϵ</span>
+                        <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                        <span class="mbin">−</span>
+                        <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                        <span class="mord mathit">c</span>
+                        <span class="mord mathit" style="margin-right:0.01968em;">l</span>
+                        <span class="mord mathit">o</span>
+                        <span class="mord mathit">s</span>
+                        <span class="mord mathit">u</span>
+                        <span class="mord mathit" style="margin-right:0.02778em;">r</span>
+                        <span class="mord mathit">e</span>
+                        <span class="mopen">(</span>
+                        <span class="mord">0</span>
+                        <span class="mclose">)</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mrel">=</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mopen">{</span>
+                        <span class="mord">0</span>
+                        <span class="mclose">}</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mrel">=</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mord mathit">A</span>
+                    </span>
+                </span>
+            </span>
+        </eq>
+        <br>
+        <eq>
+            <span class="katex">
+                <span class="katex-mathml">
+                    <math>
+                        <semantics>
+                            <mrow>
+                                <mi>D</mi>
+                                <mi>t</mi>
+                                <mi>r</mi>
+                                <mi>a</mi>
+                                <mi>n</mi>
+                                <mo>[</mo>
+                                <mi>A</mi>
+                                <mo separator="true">,</mo>
+                                <mi>a</mi>
+                                <mo>]</mo>
+                                <mo>=</mo>
+                                <mi>ϵ</mi>
+                                <mo>−</mo>
+                                <mi>c</mi>
+                                <mi>l</mi>
+                                <mi>o</mi>
+                                <mi>s</mi>
+                                <mi>u</mi>
+                                <mi>r</mi>
+                                <mi>e</mi>
+                                <mo>(</mo>
+                                <mn>0</mn>
+                                <mo separator="true">,</mo>
+                                <mn>1</mn>
+                                <mo>)</mo>
+                                <mo>=</mo>
+                                <mo>{</mo>
+                                <mn>0</mn>
+                                <mo separator="true">,</mo>
+                                <mn>1</mn>
+                                <mo>}</mo>
+                                <mo>=</mo>
+                                <mi>B</mi>
+                            </mrow>
+                            <annotation encoding="application/x-tex">Dtran[A,a] = \epsilon-closure(0,1) = \{0,1\} = B</annotation>
+                        </semantics>
+                    </math>
+                </span>
+                <span class="katex-html" aria-hidden="true">
+                    <span class="strut" style="height:0.75em;"></span>
+                    <span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span>
+                    <span class="base">
+                        <span class="mord mathit" style="margin-right:0.02778em;">D</span>
+                        <span class="mord mathit">t</span>
+                        <span class="mord mathit" style="margin-right:0.02778em;">r</span>
+                        <span class="mord mathit">a</span>
+                        <span class="mord mathit">n</span>
+                        <span class="mopen">[</span>
+                        <span class="mord mathit">A</span>
+                        <span class="mpunct">,</span>
+                        <span class="mord rule" style="margin-right:0.16666666666666666em;"></span>
+                        <span class="mord mathit">a</span>
+                        <span class="mclose">]</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mrel">=</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mord mathit">ϵ</span>
+                        <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                        <span class="mbin">−</span>
+                        <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                        <span class="mord mathit">c</span>
+                        <span class="mord mathit" style="margin-right:0.01968em;">l</span>
+                        <span class="mord mathit">o</span>
+                        <span class="mord mathit">s</span>
+                        <span class="mord mathit">u</span>
+                        <span class="mord mathit" style="margin-right:0.02778em;">r</span>
+                        <span class="mord mathit">e</span>
+                        <span class="mopen">(</span>
+                        <span class="mord">0</span>
+                        <span class="mpunct">,</span>
+                        <span class="mord rule" style="margin-right:0.16666666666666666em;"></span>
+                        <span class="mord">1</span>
+                        <span class="mclose">)</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mrel">=</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mopen">{</span>
+                        <span class="mord">0</span>
+                        <span class="mpunct">,</span>
+                        <span class="mord rule" style="margin-right:0.16666666666666666em;"></span>
+                        <span class="mord">1</span>
+                        <span class="mclose">}</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mrel">=</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mord mathit" style="margin-right:0.05017em;">B</span>
+                    </span>
+                </span>
+            </span>
+        </eq>
+        <br>
+        <eq>
+            <span class="katex">
+                <span class="katex-mathml">
+                    <math>
+                        <semantics>
+                            <mrow>
+                                <mi>D</mi>
+                                <mi>t</mi>
+                                <mi>r</mi>
+                                <mi>a</mi>
+                                <mi>n</mi>
+                                <mo>[</mo>
+                                <mi>A</mi>
+                                <mo separator="true">,</mo>
+                                <mi>b</mi>
+                                <mo>]</mo>
+                                <mo>=</mo>
+                                <mi>ϵ</mi>
+                                <mo>−</mo>
+                                <mi>c</mi>
+                                <mi>l</mi>
+                                <mi>o</mi>
+                                <mi>s</mi>
+                                <mi>u</mi>
+                                <mi>r</mi>
+                                <mi>e</mi>
+                                <mo>(</mo>
+                                <mn>0</mn>
+                                <mo>)</mo>
+                                <mo>=</mo>
+                                <mi>A</mi>
+                            </mrow>
+                            <annotation encoding="application/x-tex">Dtran[A,b] = \epsilon-closure(0) = A</annotation>
+                        </semantics>
+                    </math>
+                </span>
+                <span class="katex-html" aria-hidden="true">
+                    <span class="strut" style="height:0.75em;"></span>
+                    <span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span>
+                    <span class="base">
+                        <span class="mord mathit" style="margin-right:0.02778em;">D</span>
+                        <span class="mord mathit">t</span>
+                        <span class="mord mathit" style="margin-right:0.02778em;">r</span>
+                        <span class="mord mathit">a</span>
+                        <span class="mord mathit">n</span>
+                        <span class="mopen">[</span>
+                        <span class="mord mathit">A</span>
+                        <span class="mpunct">,</span>
+                        <span class="mord rule" style="margin-right:0.16666666666666666em;"></span>
+                        <span class="mord mathit">b</span>
+                        <span class="mclose">]</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mrel">=</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mord mathit">ϵ</span>
+                        <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                        <span class="mbin">−</span>
+                        <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                        <span class="mord mathit">c</span>
+                        <span class="mord mathit" style="margin-right:0.01968em;">l</span>
+                        <span class="mord mathit">o</span>
+                        <span class="mord mathit">s</span>
+                        <span class="mord mathit">u</span>
+                        <span class="mord mathit" style="margin-right:0.02778em;">r</span>
+                        <span class="mord mathit">e</span>
+                        <span class="mopen">(</span>
+                        <span class="mord">0</span>
+                        <span class="mclose">)</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mrel">=</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mord mathit">A</span>
+                    </span>
+                </span>
+            </span>
+        </eq>
+        <br>
+        <eq>
+            <span class="katex">
+                <span class="katex-mathml">
+                    <math>
+                        <semantics>
+                            <mrow>
+                                <mi>D</mi>
+                                <mi>t</mi>
+                                <mi>r</mi>
+                                <mi>a</mi>
+                                <mi>n</mi>
+                                <mo>[</mo>
+                                <mi>B</mi>
+                                <mo separator="true">,</mo>
+                                <mi>a</mi>
+                                <mo>]</mo>
+                                <mo>=</mo>
+                                <mi>ϵ</mi>
+                                <mo>−</mo>
+                                <mi>c</mi>
+                                <mi>l</mi>
+                                <mi>o</mi>
+                                <mi>s</mi>
+                                <mi>u</mi>
+                                <mi>r</mi>
+                                <mi>e</mi>
+                                <mo>(</mo>
+                                <mn>0</mn>
+                                <mo separator="true">,</mo>
+                                <mn>1</mn>
+                                <mo separator="true">,</mo>
+                                <mn>2</mn>
+                                <mo>)</mo>
+                                <mo>=</mo>
+                                <mo>{</mo>
+                                <mn>0</mn>
+                                <mo separator="true">,</mo>
+                                <mn>1</mn>
+                                <mo separator="true">,</mo>
+                                <mn>2</mn>
+                                <mo>}</mo>
+                                <mo>=</mo>
+                                <mi>C</mi>
+                            </mrow>
+                            <annotation encoding="application/x-tex">Dtran[B,a] = \epsilon-closure(0,1,2) = \{0,1,2\} = C</annotation>
+                        </semantics>
+                    </math>
+                </span>
+                <span class="katex-html" aria-hidden="true">
+                    <span class="strut" style="height:0.75em;"></span>
+                    <span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span>
+                    <span class="base">
+                        <span class="mord mathit" style="margin-right:0.02778em;">D</span>
+                        <span class="mord mathit">t</span>
+                        <span class="mord mathit" style="margin-right:0.02778em;">r</span>
+                        <span class="mord mathit">a</span>
+                        <span class="mord mathit">n</span>
+                        <span class="mopen">[</span>
+                        <span class="mord mathit" style="margin-right:0.05017em;">B</span>
+                        <span class="mpunct">,</span>
+                        <span class="mord rule" style="margin-right:0.16666666666666666em;"></span>
+                        <span class="mord mathit">a</span>
+                        <span class="mclose">]</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mrel">=</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mord mathit">ϵ</span>
+                        <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                        <span class="mbin">−</span>
+                        <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                        <span class="mord mathit">c</span>
+                        <span class="mord mathit" style="margin-right:0.01968em;">l</span>
+                        <span class="mord mathit">o</span>
+                        <span class="mord mathit">s</span>
+                        <span class="mord mathit">u</span>
+                        <span class="mord mathit" style="margin-right:0.02778em;">r</span>
+                        <span class="mord mathit">e</span>
+                        <span class="mopen">(</span>
+                        <span class="mord">0</span>
+                        <span class="mpunct">,</span>
+                        <span class="mord rule" style="margin-right:0.16666666666666666em;"></span>
+                        <span class="mord">1</span>
+                        <span class="mpunct">,</span>
+                        <span class="mord rule" style="margin-right:0.16666666666666666em;"></span>
+                        <span class="mord">2</span>
+                        <span class="mclose">)</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mrel">=</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mopen">{</span>
+                        <span class="mord">0</span>
+                        <span class="mpunct">,</span>
+                        <span class="mord rule" style="margin-right:0.16666666666666666em;"></span>
+                        <span class="mord">1</span>
+                        <span class="mpunct">,</span>
+                        <span class="mord rule" style="margin-right:0.16666666666666666em;"></span>
+                        <span class="mord">2</span>
+                        <span class="mclose">}</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mrel">=</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mord mathit" style="margin-right:0.07153em;">C</span>
+                    </span>
+                </span>
+            </span>
+        </eq>
+        <br>
+        <eq>
+            <span class="katex">
+                <span class="katex-mathml">
+                    <math>
+                        <semantics>
+                            <mrow>
+                                <mi>D</mi>
+                                <mi>t</mi>
+                                <mi>r</mi>
+                                <mi>a</mi>
+                                <mi>n</mi>
+                                <mo>[</mo>
+                                <mi>B</mi>
+                                <mo separator="true">,</mo>
+                                <mi>b</mi>
+                                <mo>]</mo>
+                                <mo>=</mo>
+                                <mi>ϵ</mi>
+                                <mo>−</mo>
+                                <mi>c</mi>
+                                <mi>l</mi>
+                                <mi>o</mi>
+                                <mi>s</mi>
+                                <mi>u</mi>
+                                <mi>r</mi>
+                                <mi>e</mi>
+                                <mo>(</mo>
+                                <mn>0</mn>
+                                <mo separator="true">,</mo>
+                                <mn>1</mn>
+                                <mo>)</mo>
+                                <mo>=</mo>
+                                <mi>B</mi>
+                            </mrow>
+                            <annotation encoding="application/x-tex">Dtran[B,b] = \epsilon-closure(0,1) = B</annotation>
+                        </semantics>
+                    </math>
+                </span>
+                <span class="katex-html" aria-hidden="true">
+                    <span class="strut" style="height:0.75em;"></span>
+                    <span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span>
+                    <span class="base">
+                        <span class="mord mathit" style="margin-right:0.02778em;">D</span>
+                        <span class="mord mathit">t</span>
+                        <span class="mord mathit" style="margin-right:0.02778em;">r</span>
+                        <span class="mord mathit">a</span>
+                        <span class="mord mathit">n</span>
+                        <span class="mopen">[</span>
+                        <span class="mord mathit" style="margin-right:0.05017em;">B</span>
+                        <span class="mpunct">,</span>
+                        <span class="mord rule" style="margin-right:0.16666666666666666em;"></span>
+                        <span class="mord mathit">b</span>
+                        <span class="mclose">]</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mrel">=</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mord mathit">ϵ</span>
+                        <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                        <span class="mbin">−</span>
+                        <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                        <span class="mord mathit">c</span>
+                        <span class="mord mathit" style="margin-right:0.01968em;">l</span>
+                        <span class="mord mathit">o</span>
+                        <span class="mord mathit">s</span>
+                        <span class="mord mathit">u</span>
+                        <span class="mord mathit" style="margin-right:0.02778em;">r</span>
+                        <span class="mord mathit">e</span>
+                        <span class="mopen">(</span>
+                        <span class="mord">0</span>
+                        <span class="mpunct">,</span>
+                        <span class="mord rule" style="margin-right:0.16666666666666666em;"></span>
+                        <span class="mord">1</span>
+                        <span class="mclose">)</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mrel">=</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mord mathit" style="margin-right:0.05017em;">B</span>
+                    </span>
+                </span>
+            </span>
+        </eq>
+        <br>
+        <eq>
+            <span class="katex">
+                <span class="katex-mathml">
+                    <math>
+                        <semantics>
+                            <mrow>
+                                <mi>D</mi>
+                                <mi>t</mi>
+                                <mi>r</mi>
+                                <mi>a</mi>
+                                <mi>n</mi>
+                                <mo>[</mo>
+                                <mi>C</mi>
+                                <mo separator="true">,</mo>
+                                <mi>a</mi>
+                                <mo>]</mo>
+                                <mo>=</mo>
+                                <mi>ϵ</mi>
+                                <mo>−</mo>
+                                <mi>c</mi>
+                                <mi>l</mi>
+                                <mi>o</mi>
+                                <mi>s</mi>
+                                <mi>u</mi>
+                                <mi>r</mi>
+                                <mi>e</mi>
+                                <mo>(</mo>
+                                <mn>0</mn>
+                                <mo separator="true">,</mo>
+                                <mn>1</mn>
+                                <mo separator="true">,</mo>
+                                <mn>2</mn>
+                                <mo>)</mo>
+                                <mo>=</mo>
+                                <mi>C</mi>
+                            </mrow>
+                            <annotation encoding="application/x-tex">Dtran[C,a] = \epsilon-closure(0,1,2) = C</annotation>
+                        </semantics>
+                    </math>
+                </span>
+                <span class="katex-html" aria-hidden="true">
+                    <span class="strut" style="height:0.75em;"></span>
+                    <span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span>
+                    <span class="base">
+                        <span class="mord mathit" style="margin-right:0.02778em;">D</span>
+                        <span class="mord mathit">t</span>
+                        <span class="mord mathit" style="margin-right:0.02778em;">r</span>
+                        <span class="mord mathit">a</span>
+                        <span class="mord mathit">n</span>
+                        <span class="mopen">[</span>
+                        <span class="mord mathit" style="margin-right:0.07153em;">C</span>
+                        <span class="mpunct">,</span>
+                        <span class="mord rule" style="margin-right:0.16666666666666666em;"></span>
+                        <span class="mord mathit">a</span>
+                        <span class="mclose">]</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mrel">=</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mord mathit">ϵ</span>
+                        <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                        <span class="mbin">−</span>
+                        <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                        <span class="mord mathit">c</span>
+                        <span class="mord mathit" style="margin-right:0.01968em;">l</span>
+                        <span class="mord mathit">o</span>
+                        <span class="mord mathit">s</span>
+                        <span class="mord mathit">u</span>
+                        <span class="mord mathit" style="margin-right:0.02778em;">r</span>
+                        <span class="mord mathit">e</span>
+                        <span class="mopen">(</span>
+                        <span class="mord">0</span>
+                        <span class="mpunct">,</span>
+                        <span class="mord rule" style="margin-right:0.16666666666666666em;"></span>
+                        <span class="mord">1</span>
+                        <span class="mpunct">,</span>
+                        <span class="mord rule" style="margin-right:0.16666666666666666em;"></span>
+                        <span class="mord">2</span>
+                        <span class="mclose">)</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mrel">=</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mord mathit" style="margin-right:0.07153em;">C</span>
+                    </span>
+                </span>
+            </span>
+        </eq>
+        <br>
+        <eq>
+            <span class="katex">
+                <span class="katex-mathml">
+                    <math>
+                        <semantics>
+                            <mrow>
+                                <mi>D</mi>
+                                <mi>t</mi>
+                                <mi>r</mi>
+                                <mi>a</mi>
+                                <mi>n</mi>
+                                <mo>[</mo>
+                                <mi>C</mi>
+                                <mo separator="true">,</mo>
+                                <mi>b</mi>
+                                <mo>]</mo>
+                                <mo>=</mo>
+                                <mi>ϵ</mi>
+                                <mo>−</mo>
+                                <mi>c</mi>
+                                <mi>l</mi>
+                                <mi>o</mi>
+                                <mi>s</mi>
+                                <mi>u</mi>
+                                <mi>r</mi>
+                                <mi>e</mi>
+                                <mo>(</mo>
+                                <mn>0</mn>
+                                <mo separator="true">,</mo>
+                                <mn>1</mn>
+                                <mo separator="true">,</mo>
+                                <mn>2</mn>
+                                <mo separator="true">,</mo>
+                                <mn>3</mn>
+                                <mo>)</mo>
+                                <mo>=</mo>
+                                <mi>D</mi>
+                            </mrow>
+                            <annotation encoding="application/x-tex">Dtran[C,b] = \epsilon-closure(0,1,2,3) = D</annotation>
+                        </semantics>
+                    </math>
+                </span>
+                <span class="katex-html" aria-hidden="true">
+                    <span class="strut" style="height:0.75em;"></span>
+                    <span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span>
+                    <span class="base">
+                        <span class="mord mathit" style="margin-right:0.02778em;">D</span>
+                        <span class="mord mathit">t</span>
+                        <span class="mord mathit" style="margin-right:0.02778em;">r</span>
+                        <span class="mord mathit">a</span>
+                        <span class="mord mathit">n</span>
+                        <span class="mopen">[</span>
+                        <span class="mord mathit" style="margin-right:0.07153em;">C</span>
+                        <span class="mpunct">,</span>
+                        <span class="mord rule" style="margin-right:0.16666666666666666em;"></span>
+                        <span class="mord mathit">b</span>
+                        <span class="mclose">]</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mrel">=</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mord mathit">ϵ</span>
+                        <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                        <span class="mbin">−</span>
+                        <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                        <span class="mord mathit">c</span>
+                        <span class="mord mathit" style="margin-right:0.01968em;">l</span>
+                        <span class="mord mathit">o</span>
+                        <span class="mord mathit">s</span>
+                        <span class="mord mathit">u</span>
+                        <span class="mord mathit" style="margin-right:0.02778em;">r</span>
+                        <span class="mord mathit">e</span>
+                        <span class="mopen">(</span>
+                        <span class="mord">0</span>
+                        <span class="mpunct">,</span>
+                        <span class="mord rule" style="margin-right:0.16666666666666666em;"></span>
+                        <span class="mord">1</span>
+                        <span class="mpunct">,</span>
+                        <span class="mord rule" style="margin-right:0.16666666666666666em;"></span>
+                        <span class="mord">2</span>
+                        <span class="mpunct">,</span>
+                        <span class="mord rule" style="margin-right:0.16666666666666666em;"></span>
+                        <span class="mord">3</span>
+                        <span class="mclose">)</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mrel">=</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mord mathit" style="margin-right:0.02778em;">D</span>
+                    </span>
+                </span>
+            </span>
+        </eq>
+        <br>
+        <eq>
+            <span class="katex">
+                <span class="katex-mathml">
+                    <math>
+                        <semantics>
+                            <mrow>
+                                <mi>D</mi>
+                                <mi>t</mi>
+                                <mi>r</mi>
+                                <mi>a</mi>
+                                <mi>n</mi>
+                                <mo>[</mo>
+                                <mi>D</mi>
+                                <mo separator="true">,</mo>
+                                <mi>a</mi>
+                                <mo>]</mo>
+                                <mo>=</mo>
+                                <mi>ϵ</mi>
+                                <mo>−</mo>
+                                <mi>c</mi>
+                                <mi>l</mi>
+                                <mi>o</mi>
+                                <mi>s</mi>
+                                <mi>u</mi>
+                                <mi>r</mi>
+                                <mi>e</mi>
+                                <mo>(</mo>
+                                <mn>0</mn>
+                                <mo separator="true">,</mo>
+                                <mn>1</mn>
+                                <mo separator="true">,</mo>
+                                <mn>2</mn>
+                                <mo>)</mo>
+                                <mo>=</mo>
+                                <mi>C</mi>
+                            </mrow>
+                            <annotation encoding="application/x-tex">Dtran[D,a] = \epsilon-closure(0,1,2) = C</annotation>
+                        </semantics>
+                    </math>
+                </span>
+                <span class="katex-html" aria-hidden="true">
+                    <span class="strut" style="height:0.75em;"></span>
+                    <span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span>
+                    <span class="base">
+                        <span class="mord mathit" style="margin-right:0.02778em;">D</span>
+                        <span class="mord mathit">t</span>
+                        <span class="mord mathit" style="margin-right:0.02778em;">r</span>
+                        <span class="mord mathit">a</span>
+                        <span class="mord mathit">n</span>
+                        <span class="mopen">[</span>
+                        <span class="mord mathit" style="margin-right:0.02778em;">D</span>
+                        <span class="mpunct">,</span>
+                        <span class="mord rule" style="margin-right:0.16666666666666666em;"></span>
+                        <span class="mord mathit">a</span>
+                        <span class="mclose">]</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mrel">=</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mord mathit">ϵ</span>
+                        <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                        <span class="mbin">−</span>
+                        <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                        <span class="mord mathit">c</span>
+                        <span class="mord mathit" style="margin-right:0.01968em;">l</span>
+                        <span class="mord mathit">o</span>
+                        <span class="mord mathit">s</span>
+                        <span class="mord mathit">u</span>
+                        <span class="mord mathit" style="margin-right:0.02778em;">r</span>
+                        <span class="mord mathit">e</span>
+                        <span class="mopen">(</span>
+                        <span class="mord">0</span>
+                        <span class="mpunct">,</span>
+                        <span class="mord rule" style="margin-right:0.16666666666666666em;"></span>
+                        <span class="mord">1</span>
+                        <span class="mpunct">,</span>
+                        <span class="mord rule" style="margin-right:0.16666666666666666em;"></span>
+                        <span class="mord">2</span>
+                        <span class="mclose">)</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mrel">=</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mord mathit" style="margin-right:0.07153em;">C</span>
+                    </span>
+                </span>
+            </span>
+        </eq>
+        <br>
+        <eq>
+            <span class="katex">
+                <span class="katex-mathml">
+                    <math>
+                        <semantics>
+                            <mrow>
+                                <mi>D</mi>
+                                <mi>t</mi>
+                                <mi>r</mi>
+                                <mi>a</mi>
+                                <mi>n</mi>
+                                <mo>[</mo>
+                                <mi>D</mi>
+                                <mo separator="true">,</mo>
+                                <mi>b</mi>
+                                <mo>]</mo>
+                                <mo>=</mo>
+                                <mi>ϵ</mi>
+                                <mo>−</mo>
+                                <mi>c</mi>
+                                <mi>l</mi>
+                                <mi>o</mi>
+                                <mi>s</mi>
+                                <mi>u</mi>
+                                <mi>r</mi>
+                                <mi>e</mi>
+                                <mo>(</mo>
+                                <mn>0</mn>
+                                <mo separator="true">,</mo>
+                                <mn>1</mn>
+                                <mo separator="true">,</mo>
+                                <mn>2</mn>
+                                <mo separator="true">,</mo>
+                                <mn>4</mn>
+                                <mo>)</mo>
+                                <mo>=</mo>
+                                <mi>D</mi>
+                            </mrow>
+                            <annotation encoding="application/x-tex">Dtran[D,b] = \epsilon-closure(0,1,2,4) = D</annotation>
+                        </semantics>
+                    </math>
+                </span>
+                <span class="katex-html" aria-hidden="true">
+                    <span class="strut" style="height:0.75em;"></span>
+                    <span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span>
+                    <span class="base">
+                        <span class="mord mathit" style="margin-right:0.02778em;">D</span>
+                        <span class="mord mathit">t</span>
+                        <span class="mord mathit" style="margin-right:0.02778em;">r</span>
+                        <span class="mord mathit">a</span>
+                        <span class="mord mathit">n</span>
+                        <span class="mopen">[</span>
+                        <span class="mord mathit" style="margin-right:0.02778em;">D</span>
+                        <span class="mpunct">,</span>
+                        <span class="mord rule" style="margin-right:0.16666666666666666em;"></span>
+                        <span class="mord mathit">b</span>
+                        <span class="mclose">]</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mrel">=</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mord mathit">ϵ</span>
+                        <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                        <span class="mbin">−</span>
+                        <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                        <span class="mord mathit">c</span>
+                        <span class="mord mathit" style="margin-right:0.01968em;">l</span>
+                        <span class="mord mathit">o</span>
+                        <span class="mord mathit">s</span>
+                        <span class="mord mathit">u</span>
+                        <span class="mord mathit" style="margin-right:0.02778em;">r</span>
+                        <span class="mord mathit">e</span>
+                        <span class="mopen">(</span>
+                        <span class="mord">0</span>
+                        <span class="mpunct">,</span>
+                        <span class="mord rule" style="margin-right:0.16666666666666666em;"></span>
+                        <span class="mord">1</span>
+                        <span class="mpunct">,</span>
+                        <span class="mord rule" style="margin-right:0.16666666666666666em;"></span>
+                        <span class="mord">2</span>
+                        <span class="mpunct">,</span>
+                        <span class="mord rule" style="margin-right:0.16666666666666666em;"></span>
+                        <span class="mord">4</span>
+                        <span class="mclose">)</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mrel">=</span>
+                        <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                        <span class="mord mathit" style="margin-right:0.02778em;">D</span>
+                    </span>
+                </span>
+            </span>
+        </eq>
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>NFA</th>
+                <th>DFA</th>
+                <th>a</th>
+                <th>b</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{0}</td>
+                <td>A</td>
+                <td>B</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>{0,1}</td>
+                <td>B</td>
+                <td>C</td>
+                <td>B</td>
+            </tr>
+            <tr>
+                <td>{0,1,2}</td>
+                <td>C</td>
+                <td>C</td>
+                <td>D</td>
+            </tr>
+            <tr>
+                <td>{0,1,2,3}</td>
+                <td>D</td>
+                <td>C</td>
+                <td>D</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 data-line="22" class="code-line" id="421">4.2.1</h3>
+    <ol>
+        <li data-line="23" class="code-line">
+            <eq>
+                <span class="katex">
+                    <span class="katex-mathml">
+                        <math>
+                            <semantics>
+                                <mrow>
+                                    <mi>S</mi>
+                                    <mo>→</mo>
+                                    <mi>S</mi>
+                                    <mi>S</mi>
+                                    <mo>∗</mo>
+                                    <mo>→</mo>
+                                    <mi>S</mi>
+                                    <mi>S</mi>
+                                    <mo>+</mo>
+                                    <mi>S</mi>
+                                    <mo>∗</mo>
+                                    <mo>→</mo>
+                                    <mi>a</mi>
+                                    <mi>S</mi>
+                                    <mo>+</mo>
+                                    <mi>S</mi>
+                                    <mo>∗</mo>
+                                    <mo>→</mo>
+                                    <mi>a</mi>
+                                    <mi>a</mi>
+                                    <mo>+</mo>
+                                    <mi>S</mi>
+                                    <mo>∗</mo>
+                                    <mo>→</mo>
+                                    <mi>a</mi>
+                                    <mi>a</mi>
+                                    <mo>+</mo>
+                                    <mi>a</mi>
+                                    <mo>∗</mo>
+                                </mrow>
+                                <annotation encoding="application/x-tex">S \rightarrow SS* \rightarrow SS+S* \rightarrow aS+S* \rightarrow aa+S* \rightarrow aa+a*</annotation>
+                            </semantics>
+                        </math>
+                    </span>
+                    <span class="katex-html" aria-hidden="true">
+                        <span class="strut" style="height:0.68333em;"></span>
+                        <span class="strut bottom" style="height:0.76666em;vertical-align:-0.08333em;"></span>
+                        <span class="base">
+                            <span class="mord mathit" style="margin-right:0.05764em;">S</span>
+                            <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                            <span class="mrel">→</span>
+                            <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                            <span class="mord mathit" style="margin-right:0.05764em;">S</span>
+                            <span class="mord mathit" style="margin-right:0.05764em;">S</span>
+                            <span class="mord">∗</span>
+                            <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                            <span class="mrel">→</span>
+                            <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                            <span class="mord mathit" style="margin-right:0.05764em;">S</span>
+                            <span class="mord mathit" style="margin-right:0.05764em;">S</span>
+                            <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                            <span class="mbin">+</span>
+                            <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                            <span class="mord mathit" style="margin-right:0.05764em;">S</span>
+                            <span class="mord">∗</span>
+                            <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                            <span class="mrel">→</span>
+                            <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                            <span class="mord mathit">a</span>
+                            <span class="mord mathit" style="margin-right:0.05764em;">S</span>
+                            <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                            <span class="mbin">+</span>
+                            <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                            <span class="mord mathit" style="margin-right:0.05764em;">S</span>
+                            <span class="mord">∗</span>
+                            <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                            <span class="mrel">→</span>
+                            <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                            <span class="mord mathit">a</span>
+                            <span class="mord mathit">a</span>
+                            <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                            <span class="mbin">+</span>
+                            <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                            <span class="mord mathit" style="margin-right:0.05764em;">S</span>
+                            <span class="mord">∗</span>
+                            <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                            <span class="mrel">→</span>
+                            <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                            <span class="mord mathit">a</span>
+                            <span class="mord mathit">a</span>
+                            <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                            <span class="mbin">+</span>
+                            <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                            <span class="mord mathit">a</span>
+                            <span class="mord">∗</span>
+                        </span>
+                    </span>
+                </span>
+            </eq>
+        </li>
+        <li data-line="24" class="code-line">
+            <eq>
+                <span class="katex">
+                    <span class="katex-mathml">
+                        <math>
+                            <semantics>
+                                <mrow>
+                                    <mi>S</mi>
+                                    <mo>→</mo>
+                                    <mi>S</mi>
+                                    <mi>S</mi>
+                                    <mo>∗</mo>
+                                    <mo>→</mo>
+                                    <mi>S</mi>
+                                    <mi>a</mi>
+                                    <mo>∗</mo>
+                                    <mo>→</mo>
+                                    <mi>S</mi>
+                                    <mi>S</mi>
+                                    <mo>+</mo>
+                                    <mi>a</mi>
+                                    <mo>∗</mo>
+                                    <mo>→</mo>
+                                    <mi>S</mi>
+                                    <mi>a</mi>
+                                    <mo>+</mo>
+                                    <mi>a</mi>
+                                    <mo>∗</mo>
+                                    <mo>→</mo>
+                                    <mi>a</mi>
+                                    <mi>a</mi>
+                                    <mo>+</mo>
+                                    <mi>a</mi>
+                                    <mo>∗</mo>
+                                </mrow>
+                                <annotation encoding="application/x-tex">S \rightarrow SS* \rightarrow Sa* \rightarrow SS+a* \rightarrow Sa+a* \rightarrow aa+a*</annotation>
+                            </semantics>
+                        </math>
+                    </span>
+                    <span class="katex-html" aria-hidden="true">
+                        <span class="strut" style="height:0.68333em;"></span>
+                        <span class="strut bottom" style="height:0.76666em;vertical-align:-0.08333em;"></span>
+                        <span class="base">
+                            <span class="mord mathit" style="margin-right:0.05764em;">S</span>
+                            <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                            <span class="mrel">→</span>
+                            <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                            <span class="mord mathit" style="margin-right:0.05764em;">S</span>
+                            <span class="mord mathit" style="margin-right:0.05764em;">S</span>
+                            <span class="mord">∗</span>
+                            <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                            <span class="mrel">→</span>
+                            <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                            <span class="mord mathit" style="margin-right:0.05764em;">S</span>
+                            <span class="mord mathit">a</span>
+                            <span class="mord">∗</span>
+                            <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                            <span class="mrel">→</span>
+                            <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                            <span class="mord mathit" style="margin-right:0.05764em;">S</span>
+                            <span class="mord mathit" style="margin-right:0.05764em;">S</span>
+                            <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                            <span class="mbin">+</span>
+                            <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                            <span class="mord mathit">a</span>
+                            <span class="mord">∗</span>
+                            <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                            <span class="mrel">→</span>
+                            <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                            <span class="mord mathit" style="margin-right:0.05764em;">S</span>
+                            <span class="mord mathit">a</span>
+                            <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                            <span class="mbin">+</span>
+                            <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                            <span class="mord mathit">a</span>
+                            <span class="mord">∗</span>
+                            <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                            <span class="mrel">→</span>
+                            <span class="mord rule" style="margin-right:0.2777777777777778em;"></span>
+                            <span class="mord mathit">a</span>
+                            <span class="mord mathit">a</span>
+                            <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                            <span class="mbin">+</span>
+                            <span class="mord rule" style="margin-right:0.2222222222222222em;"></span>
+                            <span class="mord mathit">a</span>
+                            <span class="mord">∗</span>
+                        </span>
+                    </span>
+                </span>
+            </eq>
+        </li>
+        <li data-line="25" class="code-line">如下图
+            <br>
+            <img src="https://f.cloud.github.com/assets/340282/469058/c08b4f9c-b6af-11e2-8236-f79c6a56215a.gif" alt="4 2 1">
+        </li>
+        <li data-line="27" class="code-line">略</li>
+        <li data-line="28" class="code-line">所有加法和乘法混合的a的后缀表达式集合</li>
+    </ol>
+
+</body>
+
+</html>
