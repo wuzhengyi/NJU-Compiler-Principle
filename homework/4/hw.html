@@ -1,0 +1,931 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.4.1/github-markdown.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+    <link rel="stylesheet" href="https://gitcdn.xyz/repo/goessner/mdmath/master/css/texmath.css">
+    <link rel="stylesheet" href="https://gitcdn.xyz/repo/goessner/mdmath/master/css/vscode-texmath.css">
+
+</head>
+
+<body class="markdown-body">
+    <h1 data-line="0" class="code-line" id="%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86-%E7%AC%AC%E5%9B%9B%E6%AC%A1%E4%BD%9C%E4%B8%9A">[编译原理] 第四次作业</h1>
+    <p data-line="1" class="code-line">
+        <strong>151220129 计科 吴政亿
+            <a href="mailto:18805156360@163.com">18805156360@163.com</a>
+        </strong>
+    </p>
+    <h3 data-line="3" class="code-line" id="453">4.5.3</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>栈</th>
+                <th>输入</th>
+                <th>句柄</th>
+                <th>动作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>$</td>
+                <td>aaa*a++$</td>
+                <td></td>
+                <td>移入</td>
+            </tr>
+            <tr>
+                <td>$a</td>
+                <td>aa*a++$</td>
+                <td>a</td>
+                <td>规约: S -> a</td>
+            </tr>
+            <tr>
+                <td>$S</td>
+                <td>aa*a++$</td>
+                <td></td>
+                <td>移入</td>
+            </tr>
+            <tr>
+                <td>$Sa</td>
+                <td>a*a++$</td>
+                <td>a</td>
+                <td>规约: S -> a</td>
+            </tr>
+            <tr>
+                <td>$SS</td>
+                <td>a*a++$</td>
+                <td></td>
+                <td>移入</td>
+            </tr>
+            <tr>
+                <td>$SSa</td>
+                <td>*a++$</td>
+                <td>a</td>
+                <td>规约: S -> a</td>
+            </tr>
+            <tr>
+                <td>$SSS</td>
+                <td>*a++$</td>
+                <td></td>
+                <td>移入</td>
+            </tr>
+            <tr>
+                <td>$SSS*</td>
+                <td>a++$</td>
+                <td>SS*</td>
+                <td>规约: S -> SS*</td>
+            </tr>
+            <tr>
+                <td>$SS</td>
+                <td>a++$</td>
+                <td></td>
+                <td>移入</td>
+            </tr>
+            <tr>
+                <td>$SSa</td>
+                <td>++$</td>
+                <td>a</td>
+                <td>规约: S -> a</td>
+            </tr>
+            <tr>
+                <td>$SSS</td>
+                <td>++$</td>
+                <td></td>
+                <td>移入</td>
+            </tr>
+            <tr>
+                <td>$SSS+</td>
+                <td>+$</td>
+                <td>SS+</td>
+                <td>规约: S -> SS+</td>
+            </tr>
+            <tr>
+                <td>$SS</td>
+                <td>+$</td>
+                <td></td>
+                <td>移入</td>
+            </tr>
+            <tr>
+                <td>$SS+</td>
+                <td>$</td>
+                <td>SS+</td>
+                <td>规约: S -> SS+</td>
+            </tr>
+            <tr>
+                <td>$S</td>
+                <td>$</td>
+                <td></td>
+                <td>接受</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 data-line="108" class="code-line" id="462">4.6.2</h3>
+    <p data-line="110" class="code-line">
+        <img src="https://img-blog.csdn.net/20180403203930980?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p1c3RpY2Uw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70"
+        width="500"    
+        alt="">
+    </p>
+    <p data-line="112" class="code-line">Follow(S) = {+ , *, $ , a}</p>
+    <table>
+        <thead>
+            <tr>
+                <th>GOTO函数表</th>
+                <th>+</th>
+                <th>*</th>
+                <th>$</th>
+                <th>a</th>
+                <th>S</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <eq>
+                        <span class="katex">
+                            <span class="katex-mathml">
+                                <math>
+                                    <semantics>
+                                        <mrow>
+                                            <msub>
+                                                <mi>I</mi>
+                                                <mn>0</mn>
+                                            </msub>
+                                        </mrow>
+                                        <annotation encoding="application/x-tex">I_0</annotation>
+                                    </semantics>
+                                </math>
+                            </span>
+                            <span class="katex-html" aria-hidden="true">
+                                <span class="strut" style="height:0.68333em;"></span>
+                                <span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span>
+                                <span class="base">
+                                    <span class="mord">
+                                        <span class="mord mathit" style="margin-right:0.07847em;">I</span>
+                                        <span class="msupsub">
+                                            <span class="vlist-t vlist-t2">
+                                                <span class="vlist-r">
+                                                    <span class="vlist" style="height:0.30110799999999993em;">
+                                                        <span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;">
+                                                            <span class="pstrut" style="height:2.7em;"></span>
+                                                            <span class="sizing reset-size6 size3 mtight">
+                                                                <span class="mord mtight">0</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                    <span class="vlist-s">​</span>
+                                                </span>
+                                                <span class="vlist-r">
+                                                    <span class="vlist" style="height:0.15em;"></span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </span>
+                    </eq>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <eq>
+                        <span class="katex">
+                            <span class="katex-mathml">
+                                <math>
+                                    <semantics>
+                                        <mrow>
+                                            <msub>
+                                                <mi>I</mi>
+                                                <mn>2</mn>
+                                            </msub>
+                                        </mrow>
+                                        <annotation encoding="application/x-tex">I_2</annotation>
+                                    </semantics>
+                                </math>
+                            </span>
+                            <span class="katex-html" aria-hidden="true">
+                                <span class="strut" style="height:0.68333em;"></span>
+                                <span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span>
+                                <span class="base">
+                                    <span class="mord">
+                                        <span class="mord mathit" style="margin-right:0.07847em;">I</span>
+                                        <span class="msupsub">
+                                            <span class="vlist-t vlist-t2">
+                                                <span class="vlist-r">
+                                                    <span class="vlist" style="height:0.30110799999999993em;">
+                                                        <span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;">
+                                                            <span class="pstrut" style="height:2.7em;"></span>
+                                                            <span class="sizing reset-size6 size3 mtight">
+                                                                <span class="mord mtight">2</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                    <span class="vlist-s">​</span>
+                                                </span>
+                                                <span class="vlist-r">
+                                                    <span class="vlist" style="height:0.15em;"></span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </span>
+                    </eq>
+                </td>
+                <td>
+                    <eq>
+                        <span class="katex">
+                            <span class="katex-mathml">
+                                <math>
+                                    <semantics>
+                                        <mrow>
+                                            <msub>
+                                                <mi>I</mi>
+                                                <mn>1</mn>
+                                            </msub>
+                                        </mrow>
+                                        <annotation encoding="application/x-tex">I_1</annotation>
+                                    </semantics>
+                                </math>
+                            </span>
+                            <span class="katex-html" aria-hidden="true">
+                                <span class="strut" style="height:0.68333em;"></span>
+                                <span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span>
+                                <span class="base">
+                                    <span class="mord">
+                                        <span class="mord mathit" style="margin-right:0.07847em;">I</span>
+                                        <span class="msupsub">
+                                            <span class="vlist-t vlist-t2">
+                                                <span class="vlist-r">
+                                                    <span class="vlist" style="height:0.30110799999999993em;">
+                                                        <span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;">
+                                                            <span class="pstrut" style="height:2.7em;"></span>
+                                                            <span class="sizing reset-size6 size3 mtight">
+                                                                <span class="mord mtight">1</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                    <span class="vlist-s">​</span>
+                                                </span>
+                                                <span class="vlist-r">
+                                                    <span class="vlist" style="height:0.15em;"></span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </span>
+                    </eq>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <eq>
+                        <span class="katex">
+                            <span class="katex-mathml">
+                                <math>
+                                    <semantics>
+                                        <mrow>
+                                            <msub>
+                                                <mi>I</mi>
+                                                <mn>1</mn>
+                                            </msub>
+                                        </mrow>
+                                        <annotation encoding="application/x-tex">I_1</annotation>
+                                    </semantics>
+                                </math>
+                            </span>
+                            <span class="katex-html" aria-hidden="true">
+                                <span class="strut" style="height:0.68333em;"></span>
+                                <span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span>
+                                <span class="base">
+                                    <span class="mord">
+                                        <span class="mord mathit" style="margin-right:0.07847em;">I</span>
+                                        <span class="msupsub">
+                                            <span class="vlist-t vlist-t2">
+                                                <span class="vlist-r">
+                                                    <span class="vlist" style="height:0.30110799999999993em;">
+                                                        <span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;">
+                                                            <span class="pstrut" style="height:2.7em;"></span>
+                                                            <span class="sizing reset-size6 size3 mtight">
+                                                                <span class="mord mtight">1</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                    <span class="vlist-s">​</span>
+                                                </span>
+                                                <span class="vlist-r">
+                                                    <span class="vlist" style="height:0.15em;"></span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </span>
+                    </eq>
+                </td>
+                <td></td>
+                <td></td>
+                <td>ACCEPT</td>
+                <td>
+                    <eq>
+                        <span class="katex">
+                            <span class="katex-mathml">
+                                <math>
+                                    <semantics>
+                                        <mrow>
+                                            <msub>
+                                                <mi>I</mi>
+                                                <mn>2</mn>
+                                            </msub>
+                                        </mrow>
+                                        <annotation encoding="application/x-tex">I_2</annotation>
+                                    </semantics>
+                                </math>
+                            </span>
+                            <span class="katex-html" aria-hidden="true">
+                                <span class="strut" style="height:0.68333em;"></span>
+                                <span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span>
+                                <span class="base">
+                                    <span class="mord">
+                                        <span class="mord mathit" style="margin-right:0.07847em;">I</span>
+                                        <span class="msupsub">
+                                            <span class="vlist-t vlist-t2">
+                                                <span class="vlist-r">
+                                                    <span class="vlist" style="height:0.30110799999999993em;">
+                                                        <span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;">
+                                                            <span class="pstrut" style="height:2.7em;"></span>
+                                                            <span class="sizing reset-size6 size3 mtight">
+                                                                <span class="mord mtight">2</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                    <span class="vlist-s">​</span>
+                                                </span>
+                                                <span class="vlist-r">
+                                                    <span class="vlist" style="height:0.15em;"></span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </span>
+                    </eq>
+                </td>
+                <td>
+                    <eq>
+                        <span class="katex">
+                            <span class="katex-mathml">
+                                <math>
+                                    <semantics>
+                                        <mrow>
+                                            <msub>
+                                                <mi>I</mi>
+                                                <mn>3</mn>
+                                            </msub>
+                                        </mrow>
+                                        <annotation encoding="application/x-tex">I_3</annotation>
+                                    </semantics>
+                                </math>
+                            </span>
+                            <span class="katex-html" aria-hidden="true">
+                                <span class="strut" style="height:0.68333em;"></span>
+                                <span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span>
+                                <span class="base">
+                                    <span class="mord">
+                                        <span class="mord mathit" style="margin-right:0.07847em;">I</span>
+                                        <span class="msupsub">
+                                            <span class="vlist-t vlist-t2">
+                                                <span class="vlist-r">
+                                                    <span class="vlist" style="height:0.30110799999999993em;">
+                                                        <span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;">
+                                                            <span class="pstrut" style="height:2.7em;"></span>
+                                                            <span class="sizing reset-size6 size3 mtight">
+                                                                <span class="mord mtight">3</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                    <span class="vlist-s">​</span>
+                                                </span>
+                                                <span class="vlist-r">
+                                                    <span class="vlist" style="height:0.15em;"></span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </span>
+                    </eq>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <eq>
+                        <span class="katex">
+                            <span class="katex-mathml">
+                                <math>
+                                    <semantics>
+                                        <mrow>
+                                            <msub>
+                                                <mi>I</mi>
+                                                <mn>2</mn>
+                                            </msub>
+                                        </mrow>
+                                        <annotation encoding="application/x-tex">I_2</annotation>
+                                    </semantics>
+                                </math>
+                            </span>
+                            <span class="katex-html" aria-hidden="true">
+                                <span class="strut" style="height:0.68333em;"></span>
+                                <span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span>
+                                <span class="base">
+                                    <span class="mord">
+                                        <span class="mord mathit" style="margin-right:0.07847em;">I</span>
+                                        <span class="msupsub">
+                                            <span class="vlist-t vlist-t2">
+                                                <span class="vlist-r">
+                                                    <span class="vlist" style="height:0.30110799999999993em;">
+                                                        <span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;">
+                                                            <span class="pstrut" style="height:2.7em;"></span>
+                                                            <span class="sizing reset-size6 size3 mtight">
+                                                                <span class="mord mtight">2</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                    <span class="vlist-s">​</span>
+                                                </span>
+                                                <span class="vlist-r">
+                                                    <span class="vlist" style="height:0.15em;"></span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </span>
+                    </eq>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <eq>
+                        <span class="katex">
+                            <span class="katex-mathml">
+                                <math>
+                                    <semantics>
+                                        <mrow>
+                                            <msub>
+                                                <mi>I</mi>
+                                                <mn>3</mn>
+                                            </msub>
+                                        </mrow>
+                                        <annotation encoding="application/x-tex">I_3</annotation>
+                                    </semantics>
+                                </math>
+                            </span>
+                            <span class="katex-html" aria-hidden="true">
+                                <span class="strut" style="height:0.68333em;"></span>
+                                <span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span>
+                                <span class="base">
+                                    <span class="mord">
+                                        <span class="mord mathit" style="margin-right:0.07847em;">I</span>
+                                        <span class="msupsub">
+                                            <span class="vlist-t vlist-t2">
+                                                <span class="vlist-r">
+                                                    <span class="vlist" style="height:0.30110799999999993em;">
+                                                        <span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;">
+                                                            <span class="pstrut" style="height:2.7em;"></span>
+                                                            <span class="sizing reset-size6 size3 mtight">
+                                                                <span class="mord mtight">3</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                    <span class="vlist-s">​</span>
+                                                </span>
+                                                <span class="vlist-r">
+                                                    <span class="vlist" style="height:0.15em;"></span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </span>
+                    </eq>
+                </td>
+                <td>
+                    <eq>
+                        <span class="katex">
+                            <span class="katex-mathml">
+                                <math>
+                                    <semantics>
+                                        <mrow>
+                                            <msub>
+                                                <mi>I</mi>
+                                                <mn>4</mn>
+                                            </msub>
+                                        </mrow>
+                                        <annotation encoding="application/x-tex">I_4</annotation>
+                                    </semantics>
+                                </math>
+                            </span>
+                            <span class="katex-html" aria-hidden="true">
+                                <span class="strut" style="height:0.68333em;"></span>
+                                <span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span>
+                                <span class="base">
+                                    <span class="mord">
+                                        <span class="mord mathit" style="margin-right:0.07847em;">I</span>
+                                        <span class="msupsub">
+                                            <span class="vlist-t vlist-t2">
+                                                <span class="vlist-r">
+                                                    <span class="vlist" style="height:0.30110799999999993em;">
+                                                        <span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;">
+                                                            <span class="pstrut" style="height:2.7em;"></span>
+                                                            <span class="sizing reset-size6 size3 mtight">
+                                                                <span class="mord mtight">4</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                    <span class="vlist-s">​</span>
+                                                </span>
+                                                <span class="vlist-r">
+                                                    <span class="vlist" style="height:0.15em;"></span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </span>
+                    </eq>
+                </td>
+                <td>
+                    <eq>
+                        <span class="katex">
+                            <span class="katex-mathml">
+                                <math>
+                                    <semantics>
+                                        <mrow>
+                                            <msub>
+                                                <mi>I</mi>
+                                                <mn>5</mn>
+                                            </msub>
+                                        </mrow>
+                                        <annotation encoding="application/x-tex">I_5</annotation>
+                                    </semantics>
+                                </math>
+                            </span>
+                            <span class="katex-html" aria-hidden="true">
+                                <span class="strut" style="height:0.68333em;"></span>
+                                <span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span>
+                                <span class="base">
+                                    <span class="mord">
+                                        <span class="mord mathit" style="margin-right:0.07847em;">I</span>
+                                        <span class="msupsub">
+                                            <span class="vlist-t vlist-t2">
+                                                <span class="vlist-r">
+                                                    <span class="vlist" style="height:0.30110799999999993em;">
+                                                        <span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;">
+                                                            <span class="pstrut" style="height:2.7em;"></span>
+                                                            <span class="sizing reset-size6 size3 mtight">
+                                                                <span class="mord mtight">5</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                    <span class="vlist-s">​</span>
+                                                </span>
+                                                <span class="vlist-r">
+                                                    <span class="vlist" style="height:0.15em;"></span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </span>
+                    </eq>
+                </td>
+                <td></td>
+                <td>
+                    <eq>
+                        <span class="katex">
+                            <span class="katex-mathml">
+                                <math>
+                                    <semantics>
+                                        <mrow>
+                                            <msub>
+                                                <mi>I</mi>
+                                                <mn>2</mn>
+                                            </msub>
+                                        </mrow>
+                                        <annotation encoding="application/x-tex">I_2</annotation>
+                                    </semantics>
+                                </math>
+                            </span>
+                            <span class="katex-html" aria-hidden="true">
+                                <span class="strut" style="height:0.68333em;"></span>
+                                <span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span>
+                                <span class="base">
+                                    <span class="mord">
+                                        <span class="mord mathit" style="margin-right:0.07847em;">I</span>
+                                        <span class="msupsub">
+                                            <span class="vlist-t vlist-t2">
+                                                <span class="vlist-r">
+                                                    <span class="vlist" style="height:0.30110799999999993em;">
+                                                        <span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;">
+                                                            <span class="pstrut" style="height:2.7em;"></span>
+                                                            <span class="sizing reset-size6 size3 mtight">
+                                                                <span class="mord mtight">2</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                    <span class="vlist-s">​</span>
+                                                </span>
+                                                <span class="vlist-r">
+                                                    <span class="vlist" style="height:0.15em;"></span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </span>
+                    </eq>
+                </td>
+                <td>
+                    <eq>
+                        <span class="katex">
+                            <span class="katex-mathml">
+                                <math>
+                                    <semantics>
+                                        <mrow>
+                                            <msub>
+                                                <mi>I</mi>
+                                                <mn>3</mn>
+                                            </msub>
+                                        </mrow>
+                                        <annotation encoding="application/x-tex">I_3</annotation>
+                                    </semantics>
+                                </math>
+                            </span>
+                            <span class="katex-html" aria-hidden="true">
+                                <span class="strut" style="height:0.68333em;"></span>
+                                <span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span>
+                                <span class="base">
+                                    <span class="mord">
+                                        <span class="mord mathit" style="margin-right:0.07847em;">I</span>
+                                        <span class="msupsub">
+                                            <span class="vlist-t vlist-t2">
+                                                <span class="vlist-r">
+                                                    <span class="vlist" style="height:0.30110799999999993em;">
+                                                        <span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;">
+                                                            <span class="pstrut" style="height:2.7em;"></span>
+                                                            <span class="sizing reset-size6 size3 mtight">
+                                                                <span class="mord mtight">3</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                    <span class="vlist-s">​</span>
+                                                </span>
+                                                <span class="vlist-r">
+                                                    <span class="vlist" style="height:0.15em;"></span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </span>
+                    </eq>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <eq>
+                        <span class="katex">
+                            <span class="katex-mathml">
+                                <math>
+                                    <semantics>
+                                        <mrow>
+                                            <msub>
+                                                <mi>I</mi>
+                                                <mn>4</mn>
+                                            </msub>
+                                        </mrow>
+                                        <annotation encoding="application/x-tex">I_4</annotation>
+                                    </semantics>
+                                </math>
+                            </span>
+                            <span class="katex-html" aria-hidden="true">
+                                <span class="strut" style="height:0.68333em;"></span>
+                                <span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span>
+                                <span class="base">
+                                    <span class="mord">
+                                        <span class="mord mathit" style="margin-right:0.07847em;">I</span>
+                                        <span class="msupsub">
+                                            <span class="vlist-t vlist-t2">
+                                                <span class="vlist-r">
+                                                    <span class="vlist" style="height:0.30110799999999993em;">
+                                                        <span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;">
+                                                            <span class="pstrut" style="height:2.7em;"></span>
+                                                            <span class="sizing reset-size6 size3 mtight">
+                                                                <span class="mord mtight">4</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                    <span class="vlist-s">​</span>
+                                                </span>
+                                                <span class="vlist-r">
+                                                    <span class="vlist" style="height:0.15em;"></span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </span>
+                    </eq>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <eq>
+                        <span class="katex">
+                            <span class="katex-mathml">
+                                <math>
+                                    <semantics>
+                                        <mrow>
+                                            <msub>
+                                                <mi>I</mi>
+                                                <mn>5</mn>
+                                            </msub>
+                                        </mrow>
+                                        <annotation encoding="application/x-tex">I_5</annotation>
+                                    </semantics>
+                                </math>
+                            </span>
+                            <span class="katex-html" aria-hidden="true">
+                                <span class="strut" style="height:0.68333em;"></span>
+                                <span class="strut bottom" style="height:0.83333em;vertical-align:-0.15em;"></span>
+                                <span class="base">
+                                    <span class="mord">
+                                        <span class="mord mathit" style="margin-right:0.07847em;">I</span>
+                                        <span class="msupsub">
+                                            <span class="vlist-t vlist-t2">
+                                                <span class="vlist-r">
+                                                    <span class="vlist" style="height:0.30110799999999993em;">
+                                                        <span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;">
+                                                            <span class="pstrut" style="height:2.7em;"></span>
+                                                            <span class="sizing reset-size6 size3 mtight">
+                                                                <span class="mord mtight">5</span>
+                                                            </span>
+                                                        </span>
+                                                    </span>
+                                                    <span class="vlist-s">​</span>
+                                                </span>
+                                                <span class="vlist-r">
+                                                    <span class="vlist" style="height:0.15em;"></span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </span>
+                        </span>
+                    </eq>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <p data-line="124" class="code-line">下面对其进行编号</p>
+    <ol>
+        <li data-line="125" class="code-line">S -&gt; SS+</li>
+        <li data-line="126" class="code-line">S -&gt; SS*</li>
+        <li data-line="127" class="code-line">S -&gt; a</li>
+    </ol>
+    <p data-line="129" class="code-line">得到SLR语法分析表:</p>
+    <p data-line="131" class="code-line">
+        <img src="https://img-blog.csdn.net/20180403211914653?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p1c3RpY2Uw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70"
+        width="500"    
+        alt="slr">
+    </p>
+    <p data-line="133" class="code-line">因为无冲突，所以是SLR文法。</p>
+    <h3 data-line="135" class="code-line" id="463">4.6.3</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>栈</th>
+                <th>符号</th>
+                <th>输入</th>
+                <th>动作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td></td>
+                <td>aa*a+$</td>
+                <td>移入</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>a</td>
+                <td>a*a+$</td>
+                <td>按照S-&gt;a归约</td>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>S</td>
+                <td>a*a+$</td>
+                <td>移入</td>
+            </tr>
+            <tr>
+                <td>012</td>
+                <td>Sa</td>
+                <td>*a+$</td>
+                <td>按照S-&gt;a归约</td>
+            </tr>
+            <tr>
+                <td>013</td>
+                <td>SS</td>
+                <td>*a+$</td>
+                <td>移入</td>
+            </tr>
+            <tr>
+                <td>0135</td>
+                <td>SS*</td>
+                <td>a+$</td>
+                <td>按照S-&gt;SS*归约</td>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>S</td>
+                <td>a+$</td>
+                <td>移入</td>
+            </tr>
+            <tr>
+                <td>012</td>
+                <td>Sa</td>
+                <td>+$</td>
+                <td>按照S-&gt;a归约</td>
+            </tr>
+            <tr>
+                <td>013</td>
+                <td>SS</td>
+                <td>+$</td>
+                <td>移入</td>
+            </tr>
+            <tr>
+                <td>0134</td>
+                <td>SS+</td>
+                <td>$</td>
+                <td>按照S-&gt;SS+归约</td>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>S</td>
+                <td>$</td>
+                <td>接受</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 data-line="151" class="code-line" id="466">4.6.6</h3>
+    <ol>
+        <li data-line="153" class="code-line">
+            <p data-line="153" class="code-line">该文法不是 LL(1) 的</p>
+            <p data-line="155" class="code-line">
+                <code>S -&gt; SA</code> 和
+                <code>S -&gt; A</code> 均能推导出以 a 开头的串，所以不是 LL(1) 的</p>
+        </li>
+        <li data-line="157" class="code-line">
+            <p data-line="157" class="code-line">该文法是 SLR(1) 的</p>
+            <p data-line="159" class="code-line">该文法生成的语法分析表是没有冲突的</p>
+        </li>
+    </ol>
+
+</body>
+
+</html>
