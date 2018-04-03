@@ -1,0 +1,126 @@
+<!doctype html><html><head><meta charset='utf-8'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.4.1/github-markdown.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css">
+<link rel="stylesheet" href="https://gitcdn.xyz/repo/goessner/mdmath/master/css/texmath.css">
+<link rel="stylesheet" href="https://gitcdn.xyz/repo/goessner/mdmath/master/css/vscode-texmath.css">
+
+</head><body class="markdown-body">
+<h1 data-line="0" class="code-line" id="%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86-%E7%AC%AC%E4%B8%89%E6%AC%A1%E4%BD%9C%E4%B8%9A">编译原理 第三次作业</h1>
+<h2 data-line="2" class="code-line" id="151220129-%E8%AE%A1%E7%A7%91-%E5%90%B4%E6%94%BF%E4%BA%BF">151220129 计科 吴政亿</h2>
+<h3 data-line="4" class="code-line" id="441">4.4.1</h3>
+<p data-line="6" class="code-line">无左公因子，消除左递归后得到:</p>
+<ul>
+<li data-line="8" class="code-line">bexpr <eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base"><span class="mrel">→</span></span></span></span></eq> bterm bexpr'</li>
+<li data-line="9" class="code-line">bexpr' <eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base"><span class="mrel">→</span></span></span></span></eq> <strong>or</strong> bterm bexpr' | <eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">ϵ</span></span></span></span></eq></li>
+<li data-line="10" class="code-line">bterm <eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base"><span class="mrel">→</span></span></span></span></eq> bfactor bterm'</li>
+<li data-line="11" class="code-line">bterm' <eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base"><span class="mrel">→</span></span></span></span></eq> <strong>and</strong> bfactor bterm' | <eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">ϵ</span></span></span></span></eq></li>
+<li data-line="12" class="code-line">bfactor <eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base"><span class="mrel">→</span></span></span></span></eq> <strong>not</strong> bfactor | (bexpr) | <strong>true</strong> | <strong>false</strong></li>
+</ul>
+<p data-line="14" class="code-line">First(bexpr) = First(bterm) = First(bfactor) = {<strong>not</strong>,(,<strong>true</strong>,<strong>false</strong>}<br>
+First(bexpr') = {<strong>or</strong>, <eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">ϵ</span></span></span></span></eq>}<br>
+First(bterm) = {<strong>and</strong>, <eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">ϵ</span></span></span></span></eq>}<br>
+Follow(bexpr) = Follow(bexpr') = { ), $ }<br>
+Follow(bterm) = Follow(bterm') = { or, $ }<br>
+Follow(bfactor) = { and, $ }</p>
+<p data-line="21" class="code-line">预测分析表：</p>
+<table>
+    <thead>
+        <tr>
+            <th rowspan="2">非终结符号</th>
+            <th colspan="8">输入符号</th>
+        </tr>
+        <tr>
+            <th>and</th>
+            <th>or</th>
+            <th>not</th>
+            <th>(</th>
+            <th>)</th>
+            <th>true</th>
+            <th>false</th>
+            <th>$</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>bexpr</th>
+            <td></td>
+            <td></td>
+            <td>bexpr -> bterm bexpr'</td>
+            <td>bexpr -> bterm bexpr'</td>
+            <td></td>
+            <td>bexpr -> bterm bexpr'</td>
+            <td>bexpr -> bterm bexpr'</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>bexpr'</th>
+            <td></td>
+            <td>bexpr' -> or bterm bexpr'</td>
+            <td></td>
+            <td></td>
+            <td>bexpr' -> ε</td>
+            <td></td>
+            <td></td>
+            <td>bexpr' -> ε</td>
+        </tr>
+        <tr>
+            <th>bterm</th>
+            <td></td>
+            <td></td>
+            <td>bterm -> bfactor bterm'</td>
+            <td>bterm -> bfactor bterm'</td>
+            <td></td>
+            <td>bterm -> bfactor bterm'</td>
+            <td>bterm -> bfactor bterm'</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>bterm'</th>
+            <td></td>
+            <td>bterm' -> and bfactor bterm'</td>
+            <td></td>
+            <td></td>
+            <td>bterm' -> ε</td>
+            <td></td>
+            <td></td>
+            <td>bterm' -> ε</td>
+        </tr>
+        <tr>
+            <th>bfactor</th>
+            <td></td>
+            <td></td>
+            <td>bfactor -> not bfactor</td>
+            <td>bfactor -> (bexpr)
+            <td></td>
+            <td>bfactor -> true</td>
+            <td>bfactor -> false</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<h3 data-line="98" class="code-line" id="444">4.4.4</h3>
+<ul>
+<li data-line="100" class="code-line">First(S) = { (, <eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">ϵ</span></span></span></span></eq> }</li>
+<li data-line="101" class="code-line">FollowS(S) = { ), $ }</li>
+</ul>
+<h3 data-line="103" class="code-line" id="445">4.4.5</h3>
+<ol>
+<li data-line="105" class="code-line">对于这个带回溯的递归下降分析器，<br>
+它每一次发现错误后回溯所消去的a的数量为2,4,8.....<br>
+即<eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">2^n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.664392em;"></span><span class="strut bottom" style="height:0.664392em;vertical-align:0em;"></span><span class="base"><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">n</span></span></span></span></span></span></span></span></span></span></span></eq>，那么只有在a的个数为<eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>{</mo><msup><mi>a</mi><msup><mn>2</mn><mi>n</mi></msup></msup><mi mathvariant="normal">∣</mi><mi>n</mi><mo>≥</mo><mn>1</mn><mo>}</mo></mrow><annotation encoding="application/x-tex">\{a^{2^n} | n≥1\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.87998em;"></span><span class="strut bottom" style="height:1.12998em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">{</span><span class="mord"><span class="mord mathit">a</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.87998em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7385428571428572em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathit mtight">n</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mord">∣</span><span class="mord mathit">n</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≥</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord">1</span><span class="mclose">}</span></span></span></span></eq>时,<br>
+假设为k，则他的预测a的个数为<eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mi>k</mi></msup><mo>−</mo><msup><mn>2</mn><mi>i</mi></msup><mo separator="true">,</mo><mi>i</mi><mo>=</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mn>3</mn><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">2^k - 2^i,i=1,2,3...</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.849108em;"></span><span class="strut bottom" style="height:1.043548em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.849108em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span></span></span></span></span></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.824664em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">i</span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord mathit">i</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord">3</span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span></span></span></span></eq>,<br>
+当i等于k-1时匹配成功。<br>
+而对于六来说，只有3才能匹配，但是他不会经历这个情况。</li>
+<li data-line="111" class="code-line">他识别<eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>{</mo><msup><mi>a</mi><msup><mn>2</mn><mi>n</mi></msup></msup><mi mathvariant="normal">∣</mi><mi>n</mi><mo>≥</mo><mn>1</mn><mo>}</mo></mrow><annotation encoding="application/x-tex">\{a^{2^n} | n≥1\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.87998em;"></span><span class="strut bottom" style="height:1.12998em;vertical-align:-0.25em;"></span><span class="base"><span class="mopen">{</span><span class="mord"><span class="mord mathit">a</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.87998em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7385428571428572em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathit mtight">n</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mord">∣</span><span class="mord mathit">n</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≥</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord">1</span><span class="mclose">}</span></span></span></span></eq>的情况</li>
+</ol>
+<h3 data-line="113" class="code-line" id="452">4.5.2</h3>
+<p data-line="115" class="code-line">S   <eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⇒</mo></mrow><annotation encoding="application/x-tex">\Rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base"><span class="mrel">⇒</span></span></span></span></eq> S S +
+<eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⇒</mo></mrow><annotation encoding="application/x-tex">\Rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base"><span class="mrel">⇒</span></span></span></span></eq> S S S + +
+<eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⇒</mo></mrow><annotation encoding="application/x-tex">\Rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base"><span class="mrel">⇒</span></span></span></span></eq> S S a + +
+<eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⇒</mo></mrow><annotation encoding="application/x-tex">\Rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base"><span class="mrel">⇒</span></span></span></span></eq> S S S * a + +<br>
+<eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mo>⇒</mo></mrow><annotation encoding="application/x-tex">~~~ \Rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base"><span class="mspace"> </span><span class="mspace"> </span><span class="mspace"> </span><span class="mrel">⇒</span></span></span></span></eq> S S a * a + +
+<eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⇒</mo></mrow><annotation encoding="application/x-tex">\Rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base"><span class="mrel">⇒</span></span></span></span></eq> S a a * a + +
+<eq><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⇒</mo></mrow><annotation encoding="application/x-tex">\Rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.36687em;"></span><span class="strut bottom" style="height:0.36687em;vertical-align:0em;"></span><span class="base"><span class="mrel">⇒</span></span></span></span></eq> a a a * a + +</p>
+
+</body></html>
